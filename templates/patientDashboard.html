@@ -1,0 +1,96 @@
+{% extends "base.html"  %}
+{% block title %} patient Dashboard {% endblock %}
+
+
+{% block content%}
+
+       <!-- <div class="dashboard-content">
+        <h2><b>{{name}}</b> Welcome to Neema Hospital Patient Portal</h2>
+        <p>
+            The Neema Hospital Patient Portal provides you with convenient and secure access
+            to your health information. In our portal you will be able to access the foolowing features
+        </p>
+        <ul>
+            <li>Easy Appointment Scheduling</li>
+            <li>Access to Appointment History</li>
+            <li>E-Prescription Requests</li>
+            <li>Meditation Reminders</li>
+            <li>Efficient Profile Management</li>
+            <li>Feedback Submission</li>
+            <li>Health Insurance Payment Options</li>
+        </ul>
+
+        <h2>About Neema Hospital</h2>
+        <p>
+            Neema Hospital is committed to providing high-quality healthcare services
+            with a focus on patient well-being. Our dedicated team of healthcare professionals
+            strives to ensure that each patient receives personalized and compassionate care.
+        </p>
+    </div>
+ -->
+<header>
+        <h1><b>{{name}}</b> Welcome to Neema Hospital Patient Portal</h1>
+    </header>
+
+    <main>
+
+        <!-- First Section: Emergency Cases, Working Hours, Clinical Timetable -->
+        <section class="section">
+            <div class="cards">
+                <div class="card">
+                    <h2>Emergency Cases</h2>
+                    <p>Information about emergency cases goes here.</p>
+                </div>
+
+                <div class="card">
+                    <h2>Working Hours</h2>
+                    <table>
+                        <tr>
+                            <td>Monday- Friday</td>
+                            <td>8:00 AM - 8:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>8:00 AM - 4:00 PM</td>
+                        </tr>
+                        <!-- Add more days and hours as needed -->
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h2>Clinical Timetable</h2>
+                    <p>Details about the clinical timetable.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Second Section: About Neema Hospital -->
+        <section class="section">
+            <div class="hospital-info">
+                <h2>About Neema Hospital</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel semper mauris.</p>
+            </div>
+        </section>
+
+        <!-- Third Section: Features of the Patient Portal -->
+        <section class="section">
+            <div class="features">
+                <h2>Features of the Patient Portal</h2>
+                <ul>
+                    <li>Secure Login and Authentication</li>
+                    <li>Appointment Scheduling</li>
+                    <li>View Medical Records</li>
+                    <!-- Add more features as needed -->
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+
+
+{% endblock %}

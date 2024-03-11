@@ -1,0 +1,198 @@
+{% extends "doctorBase.html" %}
+{% block title %} Patient Records {% endblock%}
+{% block add_css%}
+<style type="text/css">
+
+	.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #3498db;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input {
+    padding: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+/* Styling for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+p {
+    text-align: center;
+    color: #e74c3c;
+}
+
+.hozrizontal-list{
+    display: flex;
+    list-style: none;
+    padding: 2px;
+}
+
+
+
+</style>
+{% endblock %}
+{% block content %}
+<br><br><br><br><br><br>
+
+<form action="#" method="POST">
+            <label for="patient_id">Enter Patient ID:</label>
+            <input type="text" id="patient_id" name="patient_id" required>
+            <button type="submit">Search</button>
+        </form>
+
+        {% if patient_details %}
+            <div class="section">
+                <h2>Patient Details</h2>
+                <table>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>PatietId</th>
+                    </tr>
+                    <tr>
+                        <td>{{ patient_details[1] }}</td>
+                        <td>{{ patient_details[2] }}</td>
+                        <td>{{ patient_details[3] }}</td>
+                        <td>{{ patient_details[6] }}</td>
+                    </tr>
+                </table>
+            </div>
+        {% endif %}
+
+                <h2>Patient Prescriptions</h2>
+        {% if prescription %}
+            <div class="section">
+                <table>
+                    <tr>
+                       <th>Doctor</th>
+                            <th>Medication</th>
+                            <th>Dosage</th>
+                            <th>Instructions</th>
+                            <th>Timestamp</th>
+                    </tr>
+                    <tr>
+                        <td>{{ prescription[2] }}</td>
+                                <td>{{ prescription[3] }}</td>
+                                <td>{{ prescription[4] }}</td>
+                                <td>{{ prescription[5] }}</td>
+                                <td>{{ prescription[6] }}</td>
+                    </tr>
+                </table>
+                {% else %}
+                    <p>No prescriptions found</p>
+                
+            </div>
+        {% endif %}
+
+                <h2>Patient Appointment</h2>
+        {% if appointments %}
+            <div class="section">
+                <table>
+                    <tr>
+                       <th>Name</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Insurance</th>
+                        <th>Status</th>
+                        <th>Department</th>
+                    </tr>
+                    <tr>
+                        <td>{{ appointments[1] }}</td>
+                        <td>{{ appointments[2] }}</td>
+                        <td>{{ appointments[3] }}</td>
+                        <td>{{ appointments[5] }}</td>
+                        <td>{{ appointments[6] }}</td>
+                        <td>{{ appointments[7] }}</td>
+                    </tr>
+                    
+                </table>
+                {% else %}
+                    <p>No appointment found</p>
+                
+            </div>
+        {% endif %}
+
+
+
+
+
+
+        
+
+            <!-- <div class="section">
+                {% if appointments %}
+                <h2>Patient Appointments</h2>
+                <ul class="hozrizontal-list">
+                    {% for appointment in appointments %}
+                    <li>{{appointment}}</li>
+
+                    <li>{{appointment}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif%}
+            </div> -->
+
+            
+
+
+
+
+
+
+{% endblock %}

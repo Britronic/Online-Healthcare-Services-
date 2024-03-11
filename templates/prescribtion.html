@@ -1,0 +1,29 @@
+{% extends "base.html"  %}
+{% block title %} E-Prescription {% endblock %}
+
+
+{% block content%}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Doctor</th>
+            <th>Medication</th>
+            <th>Dosage</th>
+            <th>Instructions</th>
+            <th>Timestamp</th>
+
+        </tr>
+        {% for request in prescription %}
+            <tr>
+                <td>{{ request[1] }}</td>
+                <td>{{ request[2] }}</td>
+                <td>{{ request[3] }}</td>
+                <td>{{ request[4] }}</td>
+                <td>{{ request[5] }}</td>
+                <td>{{ request[6] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}

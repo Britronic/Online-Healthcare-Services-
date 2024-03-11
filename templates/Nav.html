@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      background-color: #1977cc; /* Blue color */
+      padding-top: 20px;
+      border-radius: 10px;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #2980b9; /* Darker blue on hover */
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href=" {{url_for('AppointmentSch')}} ">Appointment Scheduling</a>
+  <a href="{{url_for('AppointmentHst')}}">Appointment History</a>
+  <a href="{{url_for('prescription')}}">E-Prescription Request</a>
+  <a href="{{url_for('profile')}}">Profile Management</a>
+  <a href="{{url_for('Feedback')}}">Feedback</a>
+  <a href="{{url_for('logout')}}">Logout</a>
+</div>
+
+
+
+</body>
+</html>
+

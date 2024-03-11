@@ -1,0 +1,75 @@
+{% extends "doctorBase.html" %}
+{% block title %} Appointment Management {% endblock%}
+
+{% block content %}
+
+
+<div class="home-content">
+	<div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title"><b>{{doctor_name}}</b> Appointments</div>
+            <br>
+            
+            <div class="sales-details">
+              <ul class="details">
+                <li class="topic">Name</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[1]}}</a></li>
+                {% endfor%}
+              </ul>
+              <ul class="details">
+                <li class="topic">Department</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[2]}}</a></li>
+                {% endfor%}
+              </ul>
+              <ul class="details">
+                <li class="topic">Doctor</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[3]}}</a></li>
+                {% endfor%}
+              </ul>
+
+              <ul class="details">
+                <li class="topic">Status</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[4]}}</a></li>
+                {% endfor%}
+              </ul>
+
+              <ul class="details">
+                <li class="topic">Accept</li>
+                {% for appointment in appointments %}
+                	{% if appointment[4] == 'pending' %}
+                	<span><li><a href="{{ url_for('update_status', appointment_id=appointment[0], action='accept')}}"><button class="accept">Accept</button></a></li></span>
+                	{% elif appointment[4] == 'Accepted' %}
+	                	<li><a href="#">Accepted</a></li>
+                	{% elif appointment[4] == 'Denied'  %}
+                		<li><a href="#">Denied</a></li>
+
+                	{% endif %}
+                {% endfor%}
+            </ul>
+
+                <ul class="details">
+                <li class="topic">Deny</li>
+                {% for appointment in appointments %}
+                	{% if appointment[4] == 'pending' %}
+                	<span ><li><a href="{{ url_for('update_status', appointment_id=appointment[0], action='deny')}}"><button class="deny">Deny</button></a></li></span>
+                	{% elif appointment[4] == 'Accepted' %}
+	                	<li><a href="#">Accepted</a></li>
+                	{% elif appointment[4] == 'Denied'  %}
+                		<li><a href="#">Denied</a></li>
+                	{% endif %}
+                {% endfor%}
+              </ul>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

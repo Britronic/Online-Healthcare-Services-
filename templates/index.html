@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Neema Hospital</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/favicon.png')}}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/fontawesome/css/all.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}" >
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:neema@hospital.com">neema@hospital.com</a>
+        <i class="bi bi-phone"></i> +254 753 511 206
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="{{ url_for('home') }}"> Neema Hospital</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="#" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!--  .navbar -->
+
+      <a href="{{url_for('login')}}" class="appointment-btn "><span class="d-none d-md-inline">Login</span>
+      </a>
+      <a href="{{url_for('registration')}}" class="appointment-btn "><span class="d-none d-md-inline">SignUp</span>
+      </a>
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Welcome to Neema Hospital</h1>
+      <h2> Pioneering Healthcare Execellence With State of the Art Facilities for a Healthier Tommorow</h2>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Why Choose Medilab?</h3>
+              <p>
+                At Neema, we understand the importance of a patient-centric experience. Our compassionate staff creates a nurturing environment where you feel heard, valued, and supported throughout your healthcare journey. Your well-being is not just a priority; it is our purpose. Choose Neema Hospital for a healthcare experience that goes beyond expectations, where expertise meets empathy, and where your health is our mission.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Innovative Healthcare Solutions</h4>
+                    <p>Neema Hospital stands at the forefront of medical innovation, utilizing cutting-edge technology and pioneering treatment methodologies to ensure patients receive the most advanced and effective healthcare solutions available.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Patient-Centric Approach</h4>
+                    <p>At our premises we understand the importance of a patient-centric experience and with our dedicated team we provide seamless compassionate care to our patient. </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Holistic Wellness Programs</h4>
+                    <p>Neema Hospital takes healthcare to a high notch, focusing not only on treating symptoms but also addressing the root causes of health issues.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>About Us</h3>
+            <p>Neema Hospital stands as a paragon of excellence in the realm of healthcare, driven by an unwavering commitment to redefine standards and elevate patient experiences. Our legacy is one of relentless pursuit – a journey that started with a vision to create a healthcare institution that seamlessly blends cutting-edge medical advancements with unparalleled compassion. At Neema, we take pride in our avant-garde facilities and a team of top-tier professionals, all unified by the shared mission to provide unparalleled healthcare services. We are not just a hospital; we are a hub of innovation, compassion, and expertise, shaping the future of healthcare through a commitment to excellence. Welcome to Neema Hospital, where every patient is not just a case but a unique narrative deserving of exceptional care, attention, and a path to lifelong wellness.</p>
+            
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Health Care</a></h4>
+              <p class="description">For the last three decades Neema Hospital has prove to offer high quality healthcare country wide. </p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Patient Welfare </a></h4>
+              <p class="description">We value the welfare of our patient</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="fas fa-user-md"></i>
+              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Doctors</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="far fa-hospital"></i>
+              <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Departments</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-flask"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Research Labs</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Awards</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Discover a healthcare experience beyond expectation as you explore the myriad services offered by Neema Hospital – a beacon of innovation and compassion.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Emergency Room Services</a></h4>
+              <p>Receive immediate and critical care at our Emergency Room, where our skilled medical team is ready 24/7 to handle urgent medical situations.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="">Laboratory and Diagnostic Imaging Service</a></h4>
+              <p>Access comprehensive diagnostic services, including blood tests, imaging, and other laboratory procedures, aiding accurate and timely medical assessments.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4><a href="">Primary Care and Family Medicine</a></h4>
+              <p>Establish a long-term relationship with our primary care physicians for routine check-ups, preventive care, and management of common medical conditions.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4><a href="">Neurological Expertise</a></h4>
+              <p>Navigate the complexities of the nervous system with Neema's Neurology Department. Our specialists offer advanced diagnostics and personalized treatment plans for neurological conditions.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-wheelchair"></i></div>
+              <h4><a href="">Hospital Service for Individual with Disabilities</a></h4>
+              <p>At Neema Hospital, we are committed to ensuring that our healthcare are accessible and inclusive for individual with disabilities</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-notes-medical"></i></div>
+              <h4><a href="">Pharmacy Services</a></h4>
+              <p>Access convenient and expert pharmacy services within the hospital premises, ensuring timely and accurate dispensing of medications prescribed by our healthcare professionals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Departments</h2>
+          <p>Embark on a journey through Neema Hospital's dynamic departments, where expertise meets innovation to deliver comprehensive and specialized healthcare services. Our state-of-the-art facilities house a myriad of departments, each a nucleus of excellence in its domain.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>The Heartbeat of Health</h3>
+                    <p>Cardiology is the specialized field of medicine that focuses on the heart and its intricate workings. From diagnosing heart conditions to implementing life-saving interventions, cardiologists at Neema Hospital are at the forefront of cardiovascular care. Our Cardiology department combines cutting-edge technology with a personalized approach to ensure your heart health is in expert hands. Trust Neema's Cardiology experts to keep your heartbeat strong and steady.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static', filename='img/departments-1.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Navigating the Complexities of the Nervous System</h3>
+                    <p>Journey into the intricacies of the nervous system with Neema Hospital's Neurology department. Neurologists here specialize in diagnosing and treating disorders affecting the brain, spinal cord, and nerves. Using advanced techniques, our Neurology experts unravel the complexities of neurological conditions, offering customized care plans. At Neema, your neurological well-being is a priority, ensuring that you receive the highest standard of expertise and compassion.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static', filename='img/departments-2.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Expert Care for Your Liver Health</h3>
+                    <p>Hepatology at Neema Hospital focuses on the health of one of the body's vital organs – the liver. Our hepatologists are dedicated to diagnosing and managing a spectrum of liver conditions, from hepatitis to cirrhosis. With a commitment to liver health, Neema's Hepatology department provides comprehensive care, blending medical expertise with compassionate support. Trust us to safeguard your liver health and guide you towards a path of optimal well-being.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static', filename='img/departments-3.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Nurturing the Future</h3>
+                    <p>Step into Neema Hospital's Pediatrics department, where the well-being of our youngest patients takes center stage. Our pediatricians specialize in providing comprehensive and compassionate care for infants, children, and adolescents. From routine check-ups to specialized pediatric services, Neema ensures that every child receives the attention they deserve. Join us in nurturing the future generation's health with expert pediatric care at Neema Hospital.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static', filename='img/departments-4.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Visionary Excellence in Ophthalmology</h3>
+                    <p class="fst-italic"></p>
+                    <p>Neema Hospital's Ophthalmology department is dedicated to preserving and enhancing your vision. Our ophthalmologists employ state-of-the-art diagnostic and surgical techniques to address a spectrum of eye conditions. Whether it's routine eye care, advanced surgeries, or vision correction procedures, Neema's Eye Care specialists are committed to providing visionary excellence. Trust your eyes to the experts at Neema Hospital for a clear and focused outlook on eye health.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static', filename='img/departments-5.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+  
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p></p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">How do I schedule an appointment at Neema Hospital? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>Scheduling appointments is easy! Visit our website, register and use our online patient portal to book a convenient time slot with the desired department.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">What insurance plans does Neema Hospital accept? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Neema Hospital accepts a wide range of insurance plans. Please check with our billing department or visit our website for a list of accepted insurance providers and any specific requirements.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Are there any virtual or telemedicine services available at Neema Hospital? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, Neema Hospital offers virtual consultations and telemedicine services. You can connect with our healthcare professionals remotely for certain appointments or follow-up consultations on our online patient portal.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How can I access my medical records from Neema Hospital? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>Accessing your medical records is simple. You can log in to our secure patient portal. We prioritize the confidentiality and security of your health information.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What amenities and support services are available for patients and their families during hospital stays? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>Neema Hospital is committed to providing a comfortable experience. We offer various amenities, including waiting areas, cafeterias, and support services. Our patient care coordinators are also available to assist with any additional needs or concerns during your stay.</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+<hr>
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-1.jpg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-1.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-2.jpeg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-2.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-3.jpeg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-3.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-4.jpg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-4.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-5.jpeg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-5.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-6.jpeg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-6.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-7.jpeg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-7.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static', filename='img/gallery/gallery-8.jpg')}}" class="galelry-lightbox">
+                <img src="{{ url_for('static', filename='img/gallery/gallery-8.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+    <hr>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p></p>
+        </div>
+      </div>
+      <!--
+      <div>
+        <iframe style="border:0; width: 100%; height: 350px;" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    -->
+
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Kahawa Sukari,Thika Road, Nairobi County</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@neemahospital.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+254 753 511 206</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="#" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Neema Hospital</h3>
+            <p>
+              Kahawa Sukari <br>
+              Thika Road<br>
+              Nairobi County <br><br>
+              <strong>Phone:</strong> +254 753 511 206<br>
+              <strong>Email:</strong> info@neemahospital.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#about" >About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#departments">Department</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Emergency RoomService</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Diagonistic Image Service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Primary Care And Familiy Care </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Neurologocal Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Pharmacy Services</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Neema Hospital</span></strong>. All Rights Reserved
+        </div>
+
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>

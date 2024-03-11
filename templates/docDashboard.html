@@ -1,0 +1,95 @@
+{% extends "doctorBase.html" %}
+{% block title %} Doctor Dashboard {% endblock%}
+
+{% block content %}
+<div class="home-content">
+        <div class="overview-boxes">
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Total Patients</div>
+              <div class="number">{{totalpatients}}</div>
+              <div class="indicator">
+                <i class="bx bx-up-arrow-alt"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div><!-- 
+            <i class="bx bx-cart-alt cart"></i> -->
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Total Appointments</div>
+              <div class="number">{{totalappointments}}</div>
+              <div class="indicator">
+                <i class="bx bx-up-arrow-alt"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div><!-- 
+            <i class="bx bxs-cart-add cart two"></i> -->
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Total Remarks</div>
+              <div class="number">{{feedback}}</div>
+              <div class="indicator">
+                <i class="bx bx-up-arrow-alt"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Total Doctors</div>
+              <div class="number"> {{doctor}} </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title">Recent Appointments</div>
+            <div class="sales-details">
+              <ul class="details">
+                <li class="topic">Name</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[1]}}</a></li>
+                {% endfor%}
+              </ul>
+              <ul class="details">
+                <li class="topic">Doctor</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[2]}}</a></li>
+                {% endfor%}
+              </ul>
+              <ul class="details">
+                <li class="topic">Date</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[3]}}</a></li>
+                {% endfor%}
+              </ul>
+              <ul class="details">
+                <li class="topic">Status</li>
+                {% for appointment in appointments %}
+                <li><a href="#">{{appointment[4]}}</a></li>
+                {% endfor%}
+              </ul>
+            </div>
+            
+          </div>
+          <div class="top-sales box">
+            <div class="title"><u>Recent Comments</u></div>
+            <ul class="top-sales-details">
+              
+            	{% for name,comment in comments%}
+              <li>
+                <span class="price"><b>{{name}} :</b>    {{comment}} </span>
+              </li>
+              {% endfor %}    
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+{% endblock %}

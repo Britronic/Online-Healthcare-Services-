@@ -1,0 +1,29 @@
+{% extends "base.html"  %}
+{% block title %} Appointment History {% endblock %}
+
+
+{% block content%}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Insurance</th>
+            <th>Status</th>
+            <th>Department</th>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment[1] }}</td>
+                <td>{{ appointment[2] }}</td>
+                <td>{{ appointment[3] }}</td>
+                <td>{{ appointment[4] }}</td>
+                <td>{{ appointment[5] }}</td>
+                <td>{{ appointment[6] }}</td>
+                <td>{{ appointment[7] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}

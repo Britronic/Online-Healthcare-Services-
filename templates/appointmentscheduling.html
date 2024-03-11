@@ -1,0 +1,57 @@
+{% extends "base.html"  %}
+{% block title %} Appointment Scheduling {% endblock %}
+
+
+{% block content%}
+
+<div class="Appointment">
+    
+
+  <form method="post" action="#">
+   
+    <label for="department"> Department</label>
+      <select name="department">
+        <option value="none"> Select Department</option>
+        <option value="General Medication">General Medication</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Hepatology">Hepatology</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Eye Care">Eye Care</option>
+      </select>
+
+    <label for="Doctor"> Doctor Name:</label>
+      <select name="Doctor">
+        <option value="none"> Select Doctor</option>
+        <option value="Dr Peter Mwangi">Dr Peter Mwangi</option>
+        <option value="Dr Mercy">Dr Mercy</option>
+        <option value="Dr Susan">Dr Susan</option>
+      </select>
+
+    <label for="date">Date:</label>
+    <input type="date" name="date" required><br>
+
+    <label for="time">Time:</label>
+    <input type="time" name="time" required><br>
+
+    <label for="insurance"> Health Insurance:</label>
+      <select name="insurance">
+        <option value="none"> Select Insurance</option>
+        <option value="Personal"> Personal Cover</option>
+        <option value="NHIF">NHIF</option>
+        <option value="Afya">Afya Cover</option>
+        <option value="Jubilee">Jubilee</option>
+        <option value="Lindamama">Linda Mama</option>
+        <option value="Britam">Britam</option>
+      </select>
+
+    <button type="submit">Schedule Appointment</button>
+  </form>
+</div>
+
+{% if comfirm %}
+<script type="text/javascript">
+  alert('Your Appointment has been scheduled successfully')
+</script>
+{% endif%}
+{% endblock %}

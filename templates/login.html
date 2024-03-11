@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="assets/css/style.css" media="all" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+/*    background-image: url("assets/img/hero1.jpeg");
+*/    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #37517e;
+}
+.background{
+    width: 430px;
+    height: 620px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 580px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 20px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    padding: 20px 30px;
+    margin-top: 20px;
+    
+}
+
+form a{
+    text-align: left;
+    font-size: 18px;
+    padding: 40px 15px;
+    margin: 0px;
+    color: white;
+    text-decoration: none;
+
+}
+a:hover{
+            color:#37517e;
+        }
+
+label{
+            width: 200px;
+            display: inline-block;
+            padding: 10px 5px;
+            font-weight: bold;
+            }
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    text-transform: uppercase;
+    width: 100%;
+    background-color:#37517e;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+
+<form id="form2" action="" method="post">
+    <div> <a href="{{url_for('home')}}"><i class="fas fa-home-alt"></i> </a>
+    <div>
+    <h2>LOG IN Here</h2>
+    </div>
+    
+    
+    {% if condition_met %}
+        <script>
+            alert('Invalid Login Credentials! Try Again')
+        </script>
+        {% endif %}
+
+    <div class="container">
+        <label for="email"><b>Email or Patient Id</b></label>
+        <input type="name" placeholder="" id="email" name="email" autocomplete="" required>
+
+        <label for="pass-w"><b>Password</b></label>
+        <input type="password" placeholder="" id="pass-w" name="password"  autocomplete="" required>
+
+        <button type="submit">Sign In</button><br><br>
+    </div>
+ 
+    <div class="container" >
+        <a href=" {{url_for('registration')}} ">Not yet Registered?</a>
+        <br><br>
+        <a href=" {{url_for('doclogin')}} ">Login as Doctor</a>
+    </div>
+</form>
+</body></html>

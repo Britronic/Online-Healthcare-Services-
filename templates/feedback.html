@@ -1,0 +1,21 @@
+{% extends "base.html"  %}
+{% block title %} FeedBack {% endblock %}
+
+
+{% block content%}
+
+    <form method="post" action="#">
+    	<h3 style="text-align: center;" > Enter Your Comment/Complain</h3>
+        <label for="message">Message:</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+{% if comfirm %}
+<script type="text/javascript">
+  alert('Your Remarks Has Been Submitted Successfully')
+</script>
+{% endif%}
+
+{% endblock %}

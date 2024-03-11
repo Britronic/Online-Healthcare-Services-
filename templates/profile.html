@@ -1,0 +1,52 @@
+{% extends "base.html"  %}
+{% block title %} Profile Management {% endblock %}
+
+
+{% block content%}
+
+   <br><br><br><br>
+
+<table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Patient Id</th>
+        </tr>
+        {% for profiles in profile %}
+            <tr>
+                <td>{{ profiles[1] }}</td>
+                <td>{{ profiles[5] }}</td>
+                <td>{{ profiles[2] }}</td>
+                <td>{{ profiles[3] }}</td>
+                <td>*****</td>
+                <td>{{ profiles[6] }}</td>
+               
+            </tr>
+        {% endfor %}
+    </table>
+    <form method="post" action="#">
+    	<h4 style="text-align: center;"> Update Credentials</h4>
+        <label for="new_password">New Password:</label>
+        <input type="password" name="new_password">
+
+        <label for="new_email">New Email:</label>
+        <input type="email" name="new_email">
+
+        <button type="submit">Update</button>
+    </form>
+    {% if alert1 %}
+        <script type="text/javascript">
+            alert('Your Password has been changes Succesfully')
+        </script>
+        {% endif%}
+
+    {% if alert2 %}
+        <script type="text/javascript">
+            alert('Your Email has been changes Succesfully')
+        </script>
+        {% endif%}
+
+{% endblock %}
