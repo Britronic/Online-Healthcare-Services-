@@ -3,6 +3,7 @@ import sqlite3
 from datetime import datetime
 import random
 app = Flask(__name__)
+# Make changes
 
 app.secret_key = 'mysecretkey'
 #  CREATE TABLE FUNCTION
